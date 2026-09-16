@@ -1,40 +1,40 @@
-# Storage Factory - Solidity Composability Example
+# Solidity Projects
 
-This project demonstrates **Composability** in Solidity by creating a factory contract that can deploy and interact with multiple `SimpleStorage` contracts.
+This repository contains my hands-on projects while learning Solidity through the Cyfrin Updraft curriculum.
 
-## Contracts
+## Projects
 
-### 1. `SimpleStorage.sol`
-A simple contract that allows:
-- Storing a favorite number
-- Retrieving the stored number
-- Adding people with their name and age
-- Mapping names to ages
+### 01 - SimpleStorage
+A basic smart contract demonstrating:
+- State variables
+- Structs, Arrays, and Mappings
+- Storing and retrieving data
 
-### 2. `StorageFactory.sol`
-A factory contract that:
-- Deploys new instances of `SimpleStorage`
-- Keeps track of all deployed contracts in an array
-- Allows storing and retrieving numbers from any deployed `SimpleStorage` contract using an index
+### 02 - StorageFactory
+Demonstrates **Composability** in Solidity:
+- Deploying contracts from another contract
+- Storing and interacting with multiple contract instances
+- Named imports
 
-## Features Demonstrated
-- Named Imports
-- Contract Deployment using `new`
-- Array of Contracts
-- Inter-contract communication (Composability)
-- `view` functions
-- `calldata` vs `memory`
+### 03 - FundMe
+A crowdfunding contract with real-world features:
+- Accept ETH based on USD value (Chainlink Price Feeds)
+- Track funders and amounts
+- Owner-only withdraw
+- Gas optimizations and custom errors
+- `receive` / `fallback` support
 
-## How to Use
+## Learning Path
 
-1. Deploy `StorageFactory`
-2. Call `createSimpleStorageContract()` several times to deploy multiple `SimpleStorage` contracts
-3. Use `storageFactoryStore(index, number)` to store a number in a specific contract
-4. Use `storageFactoryGet(index)` to read the number from a specific contract
-
-## Tech Stack
-- Solidity `0.8.18`
-- Remix IDE
+These projects follow the Cyfrin Updraft Solidity course:
+1. SimpleStorage
+2. Storage Factory
+3. FundMe
 
 ## Author
+
 Ilia Ansari
+
+## Notes
+
+All contracts are written for learning purposes and deployed/tested mainly on Remix and Sepolia testnet.
